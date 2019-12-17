@@ -24,6 +24,7 @@ export default function CustomImage() {
         max="300"
         defaultValue="0"
         onChange={handleRange}
+        style={{ display: "block", margin: "10px auto" }}
       />
       <CustomComponent size={size} img={url} />
     </div>

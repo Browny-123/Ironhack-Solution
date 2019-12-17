@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.item-layout {
+  width: 300px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+.item-layout span {
+  margin-left: 10px;
+}
