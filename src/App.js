@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { Switch, Route, Link } from "react-router-dom";
+import Home from "./Home";
+import Temprature from "./Temprature/Temptrature";
+import CustomImage from "./ImageCustom/CustomImage";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/temperature">Temperature</Link>
+        <Link to="/customize-image">Customize Image</Link>
+        <Link to="/celebrities">Celebrities</Link>
+      </nav>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/temperature" component={Temprature} />
+        <Route path="/customize-image" component={CustomImage} />
+        <Route render={() => <h1>404</h1>} />
+      </Switch>
     </div>
   );
 }
